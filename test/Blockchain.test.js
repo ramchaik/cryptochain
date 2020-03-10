@@ -11,7 +11,7 @@ describe('Blockchain', () => {
     originalChain = blockchain.chain;
   });
 
-  it('contains a `chain` Array instance', () => {
+  it('contains a `chain` Array `instance', () => {
     expect(blockchain.chain instanceof Array).toBe(true);
   });
 
