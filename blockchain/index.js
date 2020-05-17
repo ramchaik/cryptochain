@@ -1,5 +1,5 @@
 const Block = require('./Block');
-const cryptohash = require('../util/Crypto-Hash');
+const { cryptoHash }  = require('../util');
 
 class Blockchain {
   constructor() {
@@ -41,7 +41,7 @@ class Blockchain {
 
       if (actualLastHash !== lastHash) return false;
 
-      const validatedHash = cryptohash(timestamp, lastHash, nonce, difficulty, data);
+      const validatedHash = cryptoHash(timestamp, lastHash, nonce, difficulty, data);
 
       if (validatedHash !== hash) return false;
 
