@@ -85,7 +85,7 @@ const syncWithRootState = () => {
           "replace transactio pool map on a sync with",
           rootTransactionPoolMap
         );
-
+–
         transactionPool.setMap(rootTransactionPoolMap);
       }
     }
