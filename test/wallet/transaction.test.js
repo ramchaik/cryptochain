@@ -1,7 +1,7 @@
 const Transaction = require("../../wallet/transaction");
 const Wallet = require("../../wallet");
 const { verifySignature } = require("../../util");
-const { REWARD_INPUT, MINER_REWARD } = require("../../config");
+const { REWARD_INPUT, MINING_REWARD } = require("../../config");
 
 describe("Transaction", () => {
   let transaction, senderWallet, recipient, amount;
@@ -186,7 +186,7 @@ describe("Transaction", () => {
 
     it("creates one transaction for the miner with the `MINING_REWARD`", () => {
       expect(rewardTransaction.outputMap[minerWallet.publicKey]).toEqual(
-        MINER_REWARD
+        MINING_REWARD
       );
     });
   });
