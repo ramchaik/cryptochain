@@ -65,7 +65,7 @@ class PubSub {
     });
   }
 
-  broadcaseTransaction(transaction) {
+  broadcastTransaction(transaction) {
     this.publish({
       channel: CHANNELS.TRANSACTION,
       message: JSON.stringify(transaction),

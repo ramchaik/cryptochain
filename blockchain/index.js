@@ -27,7 +27,7 @@ class Blockchain {
     if (!Blockchain.isValidChain(chain)) {
       console.error("The incoming chain must be valid.");
       return;
-    } 
+    }
 
     if (validateTransactions && !this.validTransactionData({ chain })) {
       console.error("The incoming chain has invalid data.");
